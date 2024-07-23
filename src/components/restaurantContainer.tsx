@@ -6,7 +6,7 @@ import { URL } from "../data/data";
 const RestaurantContainer: React.FC = () => {
   const { isLoading, data, error } = useFetch(URL);
 
-  console.log(data,"sjsh")
+
 
   if (!error  && isLoading) {
     return <h1>Loading</h1>;
