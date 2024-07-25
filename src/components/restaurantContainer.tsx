@@ -6,6 +6,9 @@ import { URL } from "../data/data";
 
 
 const RestaurantContainer: React.FC = () => {
+
+  console.log("Rendering RestaurantContainer");
+
   const { isLoading, error,data } = useFetch(URL);
   const filterData  =useFilter(data);
 

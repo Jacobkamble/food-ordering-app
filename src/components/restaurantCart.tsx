@@ -1,4 +1,4 @@
-import React from "react";
+import React,{memo} from "react";
 import { FaStar } from "react-icons/fa";
 import { CDN_URL } from "../data/data";
 
@@ -25,6 +25,7 @@ const RestaurantCart: React.FC<RestaurantCartProps> = ({ details }) => {
     sla: { slaString: deliveryTime },
   } = details;
 
+  console.log("rendering card")
 
 
   return (
@@ -62,4 +63,4 @@ const RestaurantCart: React.FC<RestaurantCartProps> = ({ details }) => {
   );
 };
 
-export default RestaurantCart;
+export default memo( RestaurantCart);
