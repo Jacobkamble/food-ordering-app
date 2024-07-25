@@ -1,8 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const useFetch = (url: string) => {
+interface Fetch {
+  isLoading: boolean;
+  data: any[];
+  error: any;
+}
+
+const useFetch = (url: string): Fetch => {
   const [isLoading, setIsLoading] = useState(false);
+
   const [error, setError] = useState("");
   const [data, setData] = useState<any[]>([]);
 
@@ -14,20 +21,15 @@ const useFetch = (url: string) => {
     try {
       setIsLoading(true);
       const res = (await axios.get(urlStr)).data;
-
-      console.log(res)
-
-
       setData(
-        res.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        res.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
       );
       setIsLoading(false);
     } catch (error: any) {
       setIsLoading(false);
       setError(error);
-    }
-    finally{
-        setIsLoading(false)
+    } finally {
+      setIsLoading(false);
     }
   };
 
