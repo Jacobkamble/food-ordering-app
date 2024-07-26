@@ -21,9 +21,8 @@ const useFetch = (url: string): Fetch => {
     try {
   
       const res = (await axios.get(urlStr)).data;
-      setData(
-        res.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-      );
+      // setData(res.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setData(res)
 
     } catch (error: any) {
       setError(error);

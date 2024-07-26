@@ -25,7 +25,7 @@ const RestaurantCart: React.FC<RestaurantCartProps> = ({ details }) => {
     sla: { slaString: deliveryTime },
   } = details;
 
-  console.log("rendering card")
+  console.log("rendering card",details)
 
 
   return (
