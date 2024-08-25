@@ -2,12 +2,14 @@ import React, { ChangeEvent, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { searchFilter } from "../redux/features/filterSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 
 const Header: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
  const {isOnline}= useOnlineStatus();
+ const items=useSelector((state:any)=>state.cart.cartItems);
+ console.log(items,"items")
 
   const dispatch=useDispatch();
 
@@ -57,7 +59,7 @@ const Header: React.FC = () => {
 
         <div className="text-gray-700 hover:text-gray-900">
           <Link to="/cart">
-            <FaShoppingCart size={24} />
+            <FaShoppingCart size={24} /> {(items.length)}
           </Link>
         </div>
       </div>

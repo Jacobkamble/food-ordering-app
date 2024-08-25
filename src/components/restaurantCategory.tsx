@@ -29,7 +29,7 @@ const RestaurantCategory: React.FC<RestaurantCategoryProps> = ({ data, showItems
       <div onClick={handleClick} className="flex justify-between cursor-pointer">
         <span className="font-bold text-lg">{data.title}</span>
       </div>
-      {showItems && <ItemList items={data.itemCards} />}
+      {showItems && <ItemList items={data.itemCards} label="Add +" />}
     </div>
   );
 };
