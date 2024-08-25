@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { MENU_API } from "../data/data";
-import Error from "./Error";
-import Loading from "./Loading";
+import Error from "./error";
+import Loading from "./loading";
 import RestaurantCategory from "./restaurantCategory";
 
 const RestaurantMenu: React.FC = () => {

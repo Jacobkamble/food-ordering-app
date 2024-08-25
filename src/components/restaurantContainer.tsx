@@ -4,9 +4,9 @@ import useFetch from "../hooks/useFetch";
 import useFilter from "../hooks/useFilter";
 import { URL } from "../data/data";
 import { Link } from "react-router-dom";
-import Loading from "./Loading";
-import Error from "./Error";
 import withPromoptedLabel from "./withPromptedLabel";
+import Loading from "./loading";
+import Error from "./error";
 const PromotedCart = withPromoptedLabel(RestaurantCart);
 
 const RestaurantContainer: React.FC = () => {

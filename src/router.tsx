@@ -3,7 +3,7 @@ import AppLayout from "./layout/app-layout";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Cart from "./pages/cart";
-import Error from "./components/Error";
+import Error from "./components/error";
 import RestaurantMenu from "./components/restaurantMenu";
 
 const routes: RouteObject[] = [

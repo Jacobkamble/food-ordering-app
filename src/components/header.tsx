@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
  const {isOnline}= useOnlineStatus();
  const items=useSelector((state:any)=>state.cart.cartItems);
- console.log(items,"items")
+
 
   const dispatch=useDispatch();
 
