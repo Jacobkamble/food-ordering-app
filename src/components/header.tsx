@@ -3,9 +3,11 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { searchFilter } from "../redux/features/filterSlice";
 import { useDispatch } from "react-redux";
+import useOnlineStatus from "../hooks/useOnlineStatus";
 
 const Header: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
+ const {isOnline}= useOnlineStatus();
 
   const dispatch=useDispatch();
 
@@ -47,6 +49,10 @@ const Header: React.FC = () => {
             placeholder="Search..."
             className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+        </div>
+
+        <div className="text-gray-700 hover:text-gray-900">
+         Online Status : {isOnline?"✅":"🔴"}
         </div>
 
         <div className="text-gray-700 hover:text-gray-900">
